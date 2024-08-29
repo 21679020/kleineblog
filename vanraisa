@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="nl">
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,
+:visited,
+a :active {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    background-color:rgb(244, 252, 252);
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.856);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.li-logo a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.li-logo i {
+    font-size: 300%;
+}
+
+main {
+    margin-top: 100px;
+    background-color:rgb(244, 252, 252);
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 250%;
+
+}
+
+h3 {
+    font-size: 200%;
+
+}
+
+h4 {
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Dancing Script';
+    font-weight: 700;
+}
+
+h2.tekst-logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 250%;
+}
+
+h1,h2,h3,h4.titels-a2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+article {
+    width: 45vw;
+    margin: 0 auto;
+    background-color:rgb(255, 255, 255);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    animation-name: popup;
+    animation-duration: 8s;
+    margin-top: 100px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+
+
+}
+
+img.pannenkoekvariaties {
+    width: 150px;
+    height: 150px;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50%;
+    grid-area: 50px;
+    row-gap: 50px;
+}
+img.cassettebandjes{
+  align-items: center;
+  width: 500px;;
+
+}
+img.fotos-020 {
+    width: 150px;
+    height: 150px;
+    flex-direction: row-reverse;
+
+}
+p {
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+article ol,
+article ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 60ch;
+}
+
+li {
+    list-style-position: inside;
+    margin: 0 auto;
+}
+
+.card {
+    list-style: none;
+    height: 425px;
+    aspect-ratio: 2/2;
+    box-shadow: 0px 0px 5px rgb(104, 96, 96);
+    animation-name: popup;
+    animation-duration: 0.8s;
+}
+.card:nth-of-type(2){
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+.card header {
+    height: 50%;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+
+}
+
+.header-pannenkoekjes {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/pannpexels-photo-376464.jpeg);
+    background-position: center;
+    background-size: cover;
+    
+
+}
+.header-artikel-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/020vlag.png);
+    background-position: center;
+    background-size:cover;
+}
+
+.header-cassette { 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/cassetts.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-dali{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/dali_salvador_525.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card header h2 {
+    padding: 20px;
+    color: rgb(240, 235, 224);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 250;
+    font-size: 300%;
+}
+
+.card header h3 {
+    padding: 30px;
+    color: rgb(240, 235, 224);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: 100%;
+}
+
+.card section {
+    height: 40%;
+    padding: 10px;
+    border-bottom: 10px rgb(26, 23, 23);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 90%;
+    font-weight: 200;
+    flex-direction:column;
+}
+
+.card footer {
+    height: 10%;
+    background: rgb(204, 124, 142);
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.card footer a {
+    color: black;
+}
+.footer {
+    height: 80px;
+    background: rgba(0, 0, 0, 0.856);
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 14px;
+
+    }
+
+    article {
+        width: 100%;
+
+    }
+
+    h1 {
+        font-size: 220%;
+    }
+
+    nav {
+        padding: 10px;
+    }
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kleineblog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wdth,wght@0,92.7,300..800;1,92.7,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/1d2d631542.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="li-logo">
+                <a href="/index.html">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h2 class="tekst-logo">kleine blog</h2>
+                </a>
+        </ul>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/artikel-1.html">Artikel 1</a></li>
+            <li><a href="/pages/artikel-2.html">Artikel 2</a></li>
+            <li><a href="/pages/artikel-3.html">Artikel 3</a></li>
+            <li><a href="/pages/artikel-4.html>">Artikel 4</a></li>
+        </ul>
+    </nav>
+    <main>
+        <ul class="cards">
+            <li class="card">
+                <a href="/pages/artikel-1.html">
+                    <header class="header-pannenkoekjes">
+                        <h2>Pannenkoeken</h2>
+                        <h3>Een tijdloze favoriet</h3>
+                    </header>
+                </a>
+                <section>
+                    <p>Pannenkoeken, die heerlijke ronde lekkernijen die menig mond doen watertanden, zijn veel meer dan
+                        alleen maar een ontbijtgerecht of een traktatie op een luie zondagochtend. Ze zijn een culinaire
+                        ervaring op zichzelf, een canvas voor creativiteit en een reis door smaken en texturen. Laten we
+                        eens dieper ingaan op de verleidelijke wereld van pannenkoeken.</p>
+                </section>
+                <footer>
+                    <a href="/pages/artikel-1.html">lees artikel</a>
+                </footer>
+
+            </li>
+            <li class="card">
+                <a href="/pages/artikel-2.html">
+                    <header class="header-artikel-2">
+                        <h2>Amsterdam</h2>
+                        <h3>De hoofdstad</h3>
+                    </header>
+                </a>
+                <section>
+                    <p>Met zijn karakteristieke grachten, historische gebouwen en bruisende culturele scène is Amsterdam
+                        een van de meest geliefde bestemmingen ter wereld. De hoofdstad van Nederland biedt een rijke
+                        mix van geschiedenis, kunst, architectuur en moderne flair die bezoekers van over de hele wereld
+                        aantrekt. Laten we eens een kijkje nemen in wat deze betoverende stad te bieden heeft.</p>
+                </section>
+                <footer>
+                    <a href="/pages/artikel-2.html">lees artikel</a>
+                </footer>
+
+            </li>
+            <li class="card">
+                <a href="/pages/artikel-3.html">
+                    <header class="header-cassette">
+                        <h2>De Cassette</h2>
+                        <h3>Een Terugblik op een Retro Technologie</h3>
+                    </header>
+                </a>
+                <section>
+                    <p>Cassettebandjes, die iconische magnetische tapes die een hele generatie van muziekliefhebbers
+                        hebben
+                        vergezeld, roepen nostalgische herinneringen op aan een tijdperk van handmatig rewinden,
+                        mixtapes maken
+                        en het afspelen van favoriete nummers op draagbare walkmans. Laten we eens terugkijken op de
+                        gloriedagen
+                        van cassettebandjes en hun blijvende invloed op de muziekcultuur.</p>
+                </section>
+                <footer>
+                    <a href="/pages/artikel-3.html">lees artikel</a>
+                </footer>
+
+            </li>
+            <li class="card">
+                <a href="pages/artikel-4.html">
+                    <header class="header-dali">
+                        <h2>Salvador Dalí</h2>
+                        <h3>Een portret van de surrealitische meester</h3>
+                    </header>
+                </a>
+                <section>
+                    <p>Salvador Dalí, een van de meest iconische en controversiële figuren in de kunstgeschiedenis,
+                        blijft tot op de dag van vandaag een bron van fascinatie en bewondering. Zijn extravagante
+                        persoonlijkheid, grenzeloze verbeeldingskracht en baanbrekende artistieke visie hebben hem tot
+                        een van de leidende figuren van het surrealisme gemaakt. Laten we duiken in het leven en werk
+                        van deze briljante, enigma-achtige kunstenaar.
+                        </p>
+                </section>
+                <footer>
+                    <a href="/pages/artikel-4.html">lees artikel</a>
+                </footer>
+
+            </li>
+
+        </ul>
+    </main>
+    <footer class="footer">
+<p>Gemaakt door: Raisa Neira Sierra</p>
+<p>HICOHO3Q</p>
+<p>ROC van Amsterdam | Flevoland</p>
+    </footer>
+</body>
+<link>//github.com/21679020/kleineblog.git</link>
+
+
+</html>
